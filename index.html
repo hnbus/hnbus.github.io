@@ -1,1 +1,243 @@
-<h1>WIP</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Herceg Novi Buses</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script src="https://raw.githubusercontent.com/calvinmetcalf/leaflet-ajax/gh-pages/dist/leaflet.ajax.min.js"  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/gokertanrisever/leaflet-ruler@master/src/leaflet-ruler.js" integrity="sha384-N2S8y7hRzXUPiepaSiUvBH1ZZ7Tc/ZfchhbPdvOE5v3aBBCIepq9l+dBJPFdo1ZJ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gokertanrisever/leaflet-ruler@master/src/leaflet-ruler.css" integrity="sha384-P9DABSdtEY/XDbEInD3q+PlL+BjqPCXGcF8EkhtKSfSTr/dS5PBKa9+/PMkW2xsY" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+
+<div id='map'></div>
+
+
+<!--<script src="hn_data.geojson" type="text/javascript"></script>-->
+
+<script>
+
+	const map = L.map('map').setView([42.45, 18.53], 13);
+
+    L.control.ruler().addTo(map);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+	const baseballIcon = L.icon({
+        iconUrl: 'baseball-marker.png',
+        iconSize: [32, 37],
+        iconAnchor: [16, 37],
+        popupAnchor: [0, -28]
+    });
+
+	function onEachFeature(feature, layer) {
+        console.log(feature);
+        var props = feature.properties;
+        let popupContent = `<p>${props.id} ${props.name}I started out as a GeoJSON ${feature.geometry.type} , but now I'm a Leaflet vector!</p>`;
+
+        if (feature.properties && feature.properties.popupContent) {
+            popupContent += feature.properties.popupContent;
+        }
+
+        layer.bindPopup(popupContent);
+    }
+
+
+    var station_mapping = {
+        6:
+            "BAJKOVINA - SERVISNA ZONA",
+        7:
+            "SERVISNA ZONA - BAJKOVINA",
+        8:
+            "IGALO - DUBROVAČKA",
+        9:
+            "INSTITUT \"NOVA FAZA\"",
+        10:
+            "STARA BANJA",
+        11:
+            "IGALO \"KOD POŠTE\"",
+        12:
+            "IGALO \"HTL VOJVODINA\"",
+        13:
+            "TOPLA 1 (ISPOD SEMAFORA)",
+        14:
+            "CENTAR",
+        15:
+            "STANICA \"KOD TONSATIJA\"",
+        16:
+            "SAVINA 1",
+        17:
+            "SAVINA 2 (ISPOD ŠKOLE)",
+        18:
+            "SAVINA 3 (ISPOD MANASTIRA)",
+        19:
+            "MELJINE \"KOD BOLNICE\"",
+        20:
+            "MELJINE \"KRUŽNI TOK\"",
+        21:
+            "MELJINE \"KOD VOLI-A\"",
+        22:
+            "MELJINE \"PREKO PUTA VOLI-A\"",
+        23:
+            "ZELENIKA \"KOD LUKE\"",
+        24:
+            "ZELENIKA \"PREKO PUTA LUKE\"",
+        25:
+            "ZELENIKA \"KOD OKOV-A\"",
+        26:
+            "KUMBOR STANICA \"KOD XANADU-A\"",
+        27:
+            "KUMBOR \"KOD OLIMPIJE\"",
+        28:
+            "ĐENOVIĆI \"KOD TORTE\"",
+        29:
+            "ĐENOVIĆI \"PRŠUT KRIVINA\"",
+        30:
+            "BAOŠIĆI \"KOD DELI RADIVOJA\"",
+        31:
+            "BAOŠIĆI \"CENTAR\"",
+        32:
+            "BAOŠIĆI \"PRAVAC\"",
+        33:
+            "BIJELA \"KOD DJEČIJEG DOMA\"",
+        34:
+            "BIJELA \"ŽAGER\"",
+        35:
+            "BIJELA \"KOD PANORAME\"",
+        36:
+            "BIJELA \"KOD VOLI-A\"",
+        37:
+            "KAMENARI \"CASA DEL MARE\"",
+        38:
+            "KAMENARI \"OKRETIŠTE\"",
+        39:
+            "BIJELA \"PREKO PUTA PARK-A\"",
+        40:
+            "BIJELA \"PREKO PUTA PANORAME\"",
+        41:
+            "BIJELA \"ŽAGER\"",
+        42:
+            "BIJELA \"PREKO PUTA DJEČIJEG DOMA\"",
+        43:
+            "BAOŠIĆI \"PRAVAC\"",
+        44:
+            "BAOŠIĆI \"CENTAR\"",
+        45:
+            "ĐENOVIĆI \"IZNAD PAPAGAJA\"",
+        46:
+            "ĐENOVIĆI",
+        47:
+            "ĐENOVIĆI \"PREKO PUTA TORTE\"",
+        48:
+            "KUMBOR STANICA \"KOD BLAGOJEVIĆA\"",
+        49:
+            "KUMBOR STANICA  \"KOD XANADU-A\"",
+        50:
+            "DUBRAVA",
+        51:
+            "TOPLA 2 \"KOD DOMA ZDRAVLJA\"",
+        52:
+            "IGALO \"KOD PEKARE\"",
+        53:
+            "PETLJA",
+        54:
+            "STANICA \"KOD INSTITUTA\"",
+        55:
+            "KAMENARI \"KOD IDEA-E\"",
+        56:
+            "BIJELA \"KOD PRAONE\"",
+        57:
+            "BIJELA \"KOD IDEA-E\"",
+        58:
+            "BIJELA \"HTL PARK\"",
+        59:
+            "KAMENARI \"TOURIST INFO\"",
+        60:
+            "KOD CASTELLANA-E",
+        61:
+            "MELJINE \"IZNAD KRUŽNOG TOKA\"",
+        62:
+            "ZELENIKA \"KOD ŠKOLE\"",
+        63:
+            "BIJELA \"PREKO PUTA ZOTTO-A\"",
+        64:
+            "DOLAZNI PERON, ASHN",
+        65:
+            "KOD \"GLAVNE STANICE\"",
+        66:
+            "KOD BENZINSKE PUMPE",
+        67:
+            "POČETNA KOD VOLI-A"
+    }
+
+	/* global campus, bicycleRental, freeBus, coorsField */
+
+    fetch('/hn_busstops.geojson')
+            .then(function (res) {
+                return res.json()
+            })
+            .then(function (bus_stops) {
+                console.log(bus_stops);
+                var geojson = L.geoJSON(bus_stops, {
+
+                    style(feature) {
+                        return feature.properties && feature.properties.style;
+                    },
+
+                    onEachFeature,
+
+                    pointToLayer(feature, latlng) {
+                        return L.circleMarker(latlng, {
+                            radius: 8,
+                            fillColor: '#ff7800',
+                            color: '#000',
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: 0.8
+                        });
+                    }
+                }).addTo(map);
+            })
+
+
+
+	// const freeBusLayer = L.geoJSON(freeBus, {
+    //
+    //     filter(feature, layer) {
+    //         if (feature.properties) {
+    //             // If the property "underConstruction" exists and is true, return false (don't render features under construction)
+    //             return feature.properties.underConstruction !== undefined ? !feature.properties.underConstruction : true;
+    //         }
+    //         return false;
+    //     },
+    //
+    //     onEachFeature
+    // }).addTo(map);
+    //
+	// const coorsLayer = L.geoJSON(coorsField, {
+    //
+    //     pointToLayer(feature, latlng) {
+    //         return L.marker(latlng, {icon: baseballIcon});
+    //     },
+    //
+    //     onEachFeature
+    // }).addTo(map);
+
+</script>
+
+
+
+</body>
+</html>
