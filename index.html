@@ -14,15 +14,17 @@
 
 <style>
   body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
+
+  #info {     z-index: 100; position: absolute; bottom: 0; background-color: white; }
+  #map { position:absolute; top:0; bottom:0; width:100%; z-index: -10; }
 </style>
 </head>
 <body>
 
 <div id='map'></div>
+<div id="info"></div>
 
 
-<!--<script src="hn_data.geojson" type="text/javascript"></script>-->
 
 <script>
 
@@ -45,7 +47,7 @@
 	function onEachFeature(feature, layer) {
         console.log(feature);
         var props = feature.properties;
-        let popupContent = `<p>${props.id} ${props.name}I started out as a GeoJSON ${feature.geometry.type} , but now I'm a Leaflet vector!</p>`;
+        let popupContent = `<p>${props.id} |  ${props.name}<br/> ${props.description.value}</p>`;
 
         if (feature.properties && feature.properties.popupContent) {
             popupContent += feature.properties.popupContent;
@@ -189,15 +191,11 @@
                 return res.json()
             })
             .then(function (bus_stops) {
-                console.log(bus_stops);
-                var geojson = L.geoJSON(bus_stops, {
-
+                L.geoJSON(bus_stops, {
                     style(feature) {
                         return feature.properties && feature.properties.style;
                     },
-
                     onEachFeature,
-
                     pointToLayer(feature, latlng) {
                         return L.circleMarker(latlng, {
                             radius: 8,
@@ -210,6 +208,7 @@
                     }
                 }).addTo(map);
             })
+
 
 
 
