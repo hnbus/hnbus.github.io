@@ -5,7 +5,9 @@
     let routes = {};
     let edges = {};
     let schedules = {}
-    const avg_speed = 30;
+    let busstop_markers = {};
+    const avg_speed = 27;
+    const is_localhost = (location.hostname === "localhost" || location.hostname === "127.0.0.1");
 
     function update_arrival_info(map_features, routes, edges) {
         map_features.features.forEach(({properties}) => {
@@ -58,7 +60,7 @@
 
     function onEachFeature(feature, layer) {
         var props = arrival_info[feature.properties.id];
-        let popupContent = `<p>${props.name} [#${props.id}]<br/></p>`;
+        let popupContent = `<p><b>${props.name}</b><br/></p>`;
 
         if (feature.properties && feature.properties.popupContent) {
             popupContent += feature.properties.popupContent;
@@ -66,14 +68,19 @@
 
         popupContent += Object.keys(props.route_length).map(line_name => {
             const length = props.route_length[line_name];
-            const minutes = (length*60/avg_speed);
+            const minutes = (length*60.0/avg_speed);
             const departures = get_nearest_departures(schedules, line_name);
+            if (!departures.length){
+                return null;
+            }
             const arrive_time = get_arrive_time(departures, minutes).join("<br/>")
-            return `${minutes.toFixed(1)} m. | ${line_name}: ${length.toFixed(1)} km. <br/>${arrive_time}`
-        }).join("<br/><br/>")
+            const popup_header = is_localhost ? `${line_name} | ${length.toFixed(1)} km. | ${minutes.toFixed(1)}` : `${line_name} `
+
+            return `${popup_header}<br/>${arrive_time}`
+        }).filter((x) => x !== null).join("<br/><br/>")
 
 
-
+        history.replaceState({"busstop_id": props.id}, "", `?id=${props.id}`);
         layer.bindPopup(popupContent).openPopup();
     }
 
@@ -87,7 +94,7 @@
                 const id = feature.properties.id;
                 const is_issued = problem_ids.includes(id);
 
-                return L.circleMarker(latlng, {
+                const marker = L.circleMarker(latlng, {
                     radius: 8,
                     fillColor: is_issued ? '#ff7800' : '#ff00ff',
                     color: '#000',
@@ -95,6 +102,9 @@
                     opacity: 1,
                     fillOpacity: 0.8
                 });
+                busstop_markers[id] = marker;
+                return marker;
+
             }
         }).on('click', ({sourceTarget, layer}) => onEachFeature(sourceTarget.feature, layer)).addTo(map)
 
@@ -123,6 +133,15 @@
             init_bus_stops(map, busstops);
             if (problem_ids.length) {
                 console.log("problem_ids", problem_ids)
+            }
+        }).then(() => {
+            const params = new URLSearchParams(window.location.search);
+            const busstop_id = params.get('id');
+            if (busstop_id){
+                const marker = busstop_markers[busstop_id];
+                console.log(marker)
+                map.setView(marker.getLatLng(), 15);
+                marker.fire('click');
             }
         })
     }
