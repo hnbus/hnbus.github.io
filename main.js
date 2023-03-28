@@ -2,6 +2,9 @@
     "use strict";
     let arrival_info = {};
     let problem_ids = [];
+    let routes = {};
+    let edges = {};
+    let schedules = {}
     const avg_speed = 30;
 
     function update_arrival_info(map_features, routes, edges) {
@@ -30,10 +33,27 @@
                     problem_ids.push(busstop_id)
                 }
                 arrival_info[busstop_id].route_length[busline_name] = intermediate_distances[busstop_id];
-
-
             })
         });
+    }
+
+    function onEachFeatureAddTooltip(feature, layer) {
+        const props = arrival_info[feature.properties.id];
+        layer.bindTooltip(`<p>${props.name}`);
+    }
+
+    function get_nearest_departures(schedules, line_name){
+        const start = moment().add(-1, 'h');
+        const stop = moment().add(1, 'h');
+        return schedules[line_name].filter((time_item) => {
+            return moment(time_item, "HH:mm").isBetween(start, stop);
+        })
+    }
+
+    function get_arrive_time(departures, leg_time_minutes){
+        return departures.map((time_item) => {
+            return moment(time_item, "HH:mm").add(leg_time_minutes, "minutes").format("HH:mm");
+        })
     }
 
     function onEachFeature(feature, layer) {
@@ -43,14 +63,18 @@
         if (feature.properties && feature.properties.popupContent) {
             popupContent += feature.properties.popupContent;
         }
+
         popupContent += Object.keys(props.route_length).map(line_name => {
             const length = props.route_length[line_name];
             const minutes = (length*60/avg_speed);
-            return `${minutes.toFixed(1)} m. | ${line_name}: ${length.toFixed(1)} km.`
-        }).join("<br/>")
+            const departures = get_nearest_departures(schedules, line_name);
+            const arrive_time = get_arrive_time(departures, minutes).join("<br/>")
+            return `${minutes.toFixed(1)} m. | ${line_name}: ${length.toFixed(1)} km. <br/>${arrive_time}`
+        }).join("<br/><br/>")
 
-        layer.bindPopup(popupContent);
-        layer.bindTooltip(`<p>${props.name}`);
+
+
+        layer.bindPopup(popupContent).openPopup();
     }
 
     function init_bus_stops(map, busstops) {
@@ -58,7 +82,7 @@
             style(feature) {
                 return feature.properties && feature.properties.style;
             },
-            onEachFeature,
+            onEachFeature: onEachFeatureAddTooltip,
             pointToLayer(feature, latlng) {
                 const id = feature.properties.id;
                 const is_issued = problem_ids.includes(id);
@@ -72,7 +96,8 @@
                     fillOpacity: 0.8
                 });
             }
-        }).addTo(map)
+        }).on('click', ({sourceTarget, layer}) => onEachFeature(sourceTarget.feature, layer)).addTo(map)
+
     }
 
 
@@ -93,11 +118,11 @@
             ].map(url => fetch(url).then(resp => resp.json()))
         ).then(function (data_files) {
             const [busstops, routes_data] = data_files;
-            const {routes, edges} = routes_data;
+            ({routes, edges, schedules} = routes_data);
             update_arrival_info(busstops, routes, edges)
             init_bus_stops(map, busstops);
             if (problem_ids.length) {
-                console.log(problem_ids)
+                console.log("problem_ids", problem_ids)
             }
         })
     }
