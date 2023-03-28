@@ -2,6 +2,7 @@
     "use strict";
     let arrival_info = {};
     let problem_ids = [];
+    const avg_speed = 30;
 
     function update_arrival_info(map_features, routes, edges) {
         map_features.features.forEach(({properties}) => {
@@ -21,11 +22,11 @@
                     intermediate_distances[busstop_id] = 0;
                     return;
                 }
-                const prev_busstop_id = array[index-1];
+                const prev_busstop_id = array[index - 1];
                 const edge_distance = edges[`${prev_busstop_id}-${busstop_id}`]
                 intermediate_distances[busstop_id] = intermediate_distances[prev_busstop_id] + edge_distance;
-                if (!edge_distance){
-                    console.error("EMPTY DISTANCE", busstop_id, prev_busstop_id, arrival_info[busstop_id])
+                if (!edge_distance) {
+                    console.error("EMPTY DISTANCE", busline_name, busstop_id, prev_busstop_id, arrival_info[busstop_id])
                     problem_ids.push(busstop_id)
                 }
                 arrival_info[busstop_id].route_length[busline_name] = intermediate_distances[busstop_id];
@@ -37,20 +38,19 @@
 
     function onEachFeature(feature, layer) {
         var props = arrival_info[feature.properties.id];
-        const info = arrival_info[props.id];
-        console.log(info)
-        let popupContent = `<p>${props.name} [${props.id}]<br/></p>`;
+        let popupContent = `<p>${props.name} [#${props.id}]<br/></p>`;
 
         if (feature.properties && feature.properties.popupContent) {
             popupContent += feature.properties.popupContent;
         }
-        popupContent += Object.keys(props.route_length).map( line_name => {
+        popupContent += Object.keys(props.route_length).map(line_name => {
             const length = props.route_length[line_name];
-            return `${line_name}: ${length.toFixed(1)}`
+            const minutes = (length*60/avg_speed);
+            return `${minutes.toFixed(1)} m. | ${line_name}: ${length.toFixed(1)} km.`
         }).join("<br/>")
 
         layer.bindPopup(popupContent);
-        layer.bindTooltip(`<p>${props.id} |  ${props.name}`);
+        layer.bindTooltip(`<p>${props.name}`);
     }
 
     function init_bus_stops(map, busstops) {
@@ -93,11 +93,12 @@
             ].map(url => fetch(url).then(resp => resp.json()))
         ).then(function (data_files) {
             const [busstops, routes_data] = data_files;
-            console.log(busstops, routes_data);
             const {routes, edges} = routes_data;
             update_arrival_info(busstops, routes, edges)
             init_bus_stops(map, busstops);
-            console.log(problem_ids)
+            if (problem_ids.length) {
+                console.log(problem_ids)
+            }
         })
     }
 
