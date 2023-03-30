@@ -6,13 +6,15 @@
     let edges = {};
     let schedules = {}
     let busstop_markers = {};
+    let edge_speeds = {};
+    let busstops, routes_data;
     const is_localhost = (location.hostname === "localhost" || location.hostname === "127.0.0.1");
 
-    function get_time_for_edge(edge_length){
+    function get_time_for_edge(edge_id, edge_length){
         if (!edge_length){
             return 0;
         }
-       return  edge_length * 60.0 / get_avgspeed(edge_length);
+       return  edge_length * 60.0 / get_avgspeed(edge_id, edge_length);
     }
 
     function update_arrival_info(map_features, routes, edges) {
@@ -38,9 +40,10 @@
                     return;
                 }
                 const prev_busstop_id = array[index - 1];
-                const edge_distance = edges[`${prev_busstop_id}-${busstop_id}`]
+                const edge_id = `${prev_busstop_id}-${busstop_id}`;
+                const edge_distance = edges[edge_id]
                 const curr_distance = intermediate_distances[prev_busstop_id] + edge_distance;
-                const curr_time = intermediate_times[prev_busstop_id] + get_time_for_edge(edge_distance);
+                const curr_time = intermediate_times[prev_busstop_id] + get_time_for_edge(edge_id, edge_distance);
                 if (!edge_distance) {
                     console.error("EMPTY DISTANCE", busline_name, busstop_id, prev_busstop_id, arrival_info[busstop_id])
                     problem_ids.push(busstop_id)
@@ -57,14 +60,16 @@
     function onEachFeatureAddTooltip(feature, layer) {
         const id = feature.properties.id;
         const props = arrival_info[id];
-        layer.bindTooltip(`<p>${props.name} </p>`);
+        layer.bindTooltip(`<p>${props.name} ${props.id}</p>`);
     }
 
     function get_nearest_departures(schedules, line_name) {
-        const start = moment().add(-1, 'h');
-        const stop = moment().add(1, 'h');
+        const now = is_localhost ? moment().set('hour', 13) : moment()
+        const start = now.clone().add(-1, 'h');
+        const stop = now.clone().add(1, 'h');
         return schedules[line_name].filter((time_item) => {
-            return moment(time_item, "HH:mm").isBetween(start, stop);
+            const departure = moment(time_item, "HH:mm").set('date', now.date())
+            return departure.isBetween(start, stop);
         })
     }
 
@@ -74,24 +79,30 @@
         })
     }
 
-    function get_avgspeed(busstop_distance) {
-        if (busstop_distance < 0.5) {
-            return 20.0;
+    function get_avgspeed(edge_id, busstop_distance) {
+        const edge_speed = edge_speeds[edge_id];
+        if (edge_speed){
+            return edge_speed;
         }
-        if (busstop_distance < 0.7) {
-            return 30.0;
-        }
-        if (busstop_distance < 0.8) {
-            return 35.0;
-        }
+
+        // if (busstop_distance < 0.5) {
+        //     return 20.0;
+        // }
+        // if (busstop_distance < 0.7) {
+        //     return 30.0;
+        // }
+        //
+        // if (busstop_distance < 0.8) {
+        //     return 40.0;
+        // }
+
 
         return 40.0;
     }
 
     function onEachFeature(feature, layer) {
         const props = arrival_info[feature.properties.id];
-        const title = is_localhost ? `<b>${props.name}</b> [${props.id}]` : `<b>${props.name}</b> [${props.id}]`;
-        let popupContent = `<p>${title}<br/></p>`;
+        let popupContent = `<p><b>${props.name}</b> [${props.id}]<br/></p>`;
 
         if (feature.properties && feature.properties.popupContent) {
             popupContent += feature.properties.popupContent;
@@ -113,6 +124,19 @@
 
         history.replaceState({"busstop_id": props.id}, "", `?id=${props.id}`);
         layer.bindPopup(popupContent).openPopup();
+    }
+
+    function init_edges(map, edges){
+        Object.keys(edges).forEach( (edge) => {
+            const [start, stop] = edge.split('-').map(Number).map( (busstop_id) => busstop_markers[busstop_id].getLatLng());
+            var firstpolyline = new L.Polyline([start, stop], {
+                color: 'blue',
+                weight: 5,
+                opacity: 1,
+                smoothFactor: 1
+            });
+            firstpolyline.bindTooltip(`${edge} | ${edge_speeds[edge]}  ${edges[edge]} km`).addTo(map);
+        })
     }
 
     function init_bus_stops(map, busstops) {
@@ -153,26 +177,31 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
+        const params = new URLSearchParams(window.location.search);
+
         Promise.all([
                 '/hn_busstops.geojson',
                 '/hn_routes.json',
             ].map(url => fetch(url).then(resp => resp.json()))
         ).then(function (data_files) {
-            const [busstops, routes_data] = data_files;
-            ({routes, edges, schedules} = routes_data);
+            [busstops, routes_data] = data_files;
+            ({routes, edges, schedules, edge_speeds} = routes_data);
             update_arrival_info(busstops, routes, edges)
             init_bus_stops(map, busstops);
             if (problem_ids.length) {
                 console.log("problem_ids", problem_ids)
             }
         }).then(() => {
-            const params = new URLSearchParams(window.location.search);
             const busstop_id = params.get('id');
             if (busstop_id) {
                 const marker = busstop_markers[busstop_id];
                 console.log(marker)
                 map.setView(marker.getLatLng(), 15);
                 marker.fire('click');
+            }
+        }).then(() => {
+            if(window.location.pathname === "/edges.html"){
+                init_edges(map, edges);
             }
         })
     }
