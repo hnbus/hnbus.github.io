@@ -97,7 +97,7 @@
         // }
 
 
-        return 40.0;
+        return 37.0;
     }
 
     function onEachFeature(feature, layer) {
