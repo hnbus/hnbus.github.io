@@ -5,6 +5,7 @@
     let routes = {};
     let edges = {};
     let schedules = {}
+    let sunday_schedules = {}
     let busstop_markers = {};
     let edge_speeds = {};
     let busstops, routes_data;
@@ -63,11 +64,16 @@
         layer.bindTooltip(`<p>${props.name} ${props.id}</p>`);
     }
 
-    function get_nearest_departures(schedules, line_name) {
-        const now = is_localhost ? moment().set('hour', 13) : moment()
+    function get_nearest_departures(curr_schedule, line_name) {
+        // const now = is_localhost ? moment().set('hour', 13) : moment()
+        const now = moment()
         const start = now.clone().add(-1, 'h');
         const stop = now.clone().add(1, 'h');
-        return schedules[line_name].filter((time_item) => {
+        const line_schedule = curr_schedule[line_name];
+        if (!line_schedule){
+            return [];
+        }
+        return curr_schedule[line_name].filter((time_item) => {
             const departure = moment(time_item, "HH:mm").set('date', now.date())
             return departure.isBetween(start, stop);
         })
@@ -85,9 +91,10 @@
             return edge_speed;
         }
 
-        // if (busstop_distance < 0.5) {
+        // if (busstop_distance < 0.35) {
         //     return 20.0;
         // }
+
         // if (busstop_distance < 0.7) {
         //     return 30.0;
         // }
@@ -108,10 +115,12 @@
             popupContent += feature.properties.popupContent;
         }
 
+        const curr_schedule = moment().day() === 0 ? sunday_schedules : schedules;
+
         popupContent += Object.keys(props.route_length).map(line_name => {
             const length = props.route_length[line_name];
             const minutes = props.route_time[line_name];
-            const departures = get_nearest_departures(schedules, line_name);
+            const departures = get_nearest_departures(curr_schedule, line_name);
             if (!departures.length) {
                 return null;
             }
@@ -185,7 +194,7 @@
             ].map(url => fetch(url).then(resp => resp.json()))
         ).then(function (data_files) {
             [busstops, routes_data] = data_files;
-            ({routes, edges, schedules, edge_speeds} = routes_data);
+            ({routes, edges, schedules, edge_speeds, sunday_schedules} = routes_data);
             update_arrival_info(busstops, routes, edges)
             init_bus_stops(map, busstops);
             if (problem_ids.length) {
