@@ -149,7 +149,7 @@
     }
 
     function init_bus_stops(map, busstops) {
-        L.geoJSON(busstops, {
+        return L.geoJSON(busstops, {
             style(feature) {
                 return feature.properties && feature.properties.style;
             },
@@ -159,19 +159,18 @@
                 const is_issued = problem_ids.includes(id);
 
                 const marker = L.circleMarker(latlng, {
-                    radius: 8,
+                    radius: 10,
                     fillColor: is_issued ? '#ff7800' : '#ff00ff',
                     color: '#000',
                     weight: 1,
                     opacity: 1,
                     fillOpacity: 0.8
-                });
+                }).addTo(map);
                 busstop_markers[id] = marker;
                 return marker;
 
             }
-        }).on('click', ({sourceTarget, layer}) => onEachFeature(sourceTarget.feature, layer)).addTo(map)
-
+        }).on('click', ({sourceTarget, layer}) => onEachFeature(sourceTarget.feature, layer)).addTo(map);
     }
 
 
@@ -179,7 +178,7 @@
         const map = L.map('map').setView([42.45, 18.53], 13);
 
         L.control.ruler().addTo(map);
-        L.control.locate({flyTo: true, returnToPrevBounds: true}).addTo(map);
+        L.control.locate({flyTo: true}).addTo(map);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -196,10 +195,11 @@
             [busstops, routes_data] = data_files;
             ({routes, edges, schedules, edge_speeds, sunday_schedules} = routes_data);
             update_arrival_info(busstops, routes, edges)
-            init_bus_stops(map, busstops);
+
             if (problem_ids.length) {
                 console.log("problem_ids", problem_ids)
             }
+            return init_bus_stops(map, busstops);
         }).then(() => {
             const busstop_id = params.get('id');
             if (busstop_id) {
