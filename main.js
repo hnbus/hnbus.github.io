@@ -6,6 +6,7 @@
     let edges = {};
     let schedules = {}
     let sunday_schedules = {}
+    let holiday_list = []
     let busstop_markers = {};
     let edge_speeds = {};
     let busstops, routes_data;
@@ -116,7 +117,18 @@
             popupContent += feature.properties.popupContent;
         }
 
-        const curr_schedule = moment().day() === 0 ? sunday_schedules : schedules;
+        let is_special_date = moment().day() === 0; // is Sunday
+        if (!is_special_date) {
+            const curr_date = moment().startOf('day');
+            holiday_list.forEach((x) => {
+                const holiday = moment("14.04.2023", "DD.MM.YYYY").startOf('day');
+                if (holiday.isSame(curr_date)) {
+                    is_special_date = true;
+                }
+            })
+        }
+
+        const curr_schedule = is_special_date ? sunday_schedules : schedules;
 
         popupContent += Object.keys(props.route_length).map(line_name => {
             const length = props.route_length[line_name];
@@ -215,7 +227,7 @@
             ].map(url => fetch(url).then(resp => resp.json()))
         ).then(function (data_files) {
             [busstops, routes_data] = data_files;
-            ({routes, edges, schedules, edge_speeds, sunday_schedules} = routes_data);
+            ({routes, edges, schedules, edge_speeds, holiday_list, sunday_schedules} = routes_data);
             update_arrival_info(busstops, routes, edges)
 
             if (problem_ids.length) {
