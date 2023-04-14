@@ -121,7 +121,7 @@
         if (!is_special_date) {
             const curr_date = moment().startOf('day');
             holiday_list.forEach((x) => {
-                const holiday = moment("14.04.2023", "DD.MM.YYYY").startOf('day');
+                const holiday = moment(x, "DD.MM.YYYY").startOf('day');
                 if (holiday.isSame(curr_date)) {
                     is_special_date = true;
                 }
