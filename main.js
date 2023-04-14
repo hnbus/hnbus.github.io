@@ -9,13 +9,14 @@
     let busstop_markers = {};
     let edge_speeds = {};
     let busstops, routes_data;
+    const site_state = {'busstop_id': 0, 'full_info': false};
     const is_localhost = (location.hostname === "localhost" || location.hostname === "127.0.0.1");
 
-    function get_time_for_edge(edge_id, edge_length){
-        if (!edge_length){
+    function get_time_for_edge(edge_id, edge_length) {
+        if (!edge_length) {
             return 0;
         }
-       return  edge_length * 60.0 / get_avgspeed(edge_id, edge_length);
+        return edge_length * 60.0 / get_avgspeed(edge_id, edge_length);
     }
 
     function update_arrival_info(map_features, routes, edges) {
@@ -64,13 +65,13 @@
         layer.bindTooltip(`<p>${props.name} ${props.id}</p>`);
     }
 
-    function get_nearest_departures(curr_schedule, line_name) {
+    function get_nearest_departures(curr_schedule, line_name, full_info = false) {
         // const now = is_localhost ? moment().set('hour', 13) : moment()
         const now = moment()
-        const start = now.clone().add(-1, 'h');
-        const stop = now.clone().add(1, 'h');
+        const start = full_info ? now.clone().set('hour', 0) : now.clone().add(-1, 'h');
+        const stop = full_info ? now.clone().set('hour', 24) : now.clone().add(1, 'h');
         const line_schedule = curr_schedule[line_name];
-        if (!line_schedule){
+        if (!line_schedule) {
             return [];
         }
         return curr_schedule[line_name].filter((time_item) => {
@@ -87,7 +88,7 @@
 
     function get_avgspeed(edge_id, busstop_distance) {
         const edge_speed = edge_speeds[edge_id];
-        if (edge_speed){
+        if (edge_speed) {
             return edge_speed;
         }
 
@@ -109,7 +110,7 @@
 
     function onEachFeature(feature, layer) {
         const props = arrival_info[feature.properties.id];
-        let popupContent = `<p><b>${props.name}</b> [${props.id}]<br/></p>`;
+        let popupContent = `<p><b>${props.name}</b> [${props.id}]</p>`;
 
         if (feature.properties && feature.properties.popupContent) {
             popupContent += feature.properties.popupContent;
@@ -120,24 +121,44 @@
         popupContent += Object.keys(props.route_length).map(line_name => {
             const length = props.route_length[line_name];
             const minutes = props.route_time[line_name];
-            const departures = get_nearest_departures(curr_schedule, line_name);
+            const departures = get_nearest_departures(curr_schedule, line_name, site_state.full_info);
             if (!departures.length) {
                 return null;
             }
             const arrive_time = get_arrive_time(departures, minutes).join("<br/>")
             const popup_header = is_localhost ? `${line_name} | ${length.toFixed(1)} km. | ${minutes.toFixed(1)} m.` : `${line_name} `
 
-            return `${popup_header}<br/>${arrive_time}`
+
+            return `${popup_header}<br/><div class="${site_state.full_info ? 'multi' : ''}">${arrive_time}</div>`
         }).filter((x) => x !== null).join("<br/><br/>")
 
 
-        history.replaceState({"busstop_id": props.id}, "", `?id=${props.id}`);
-        layer.bindPopup(popupContent).openPopup();
+        const div = document.createElement("div");
+        div.innerHTML = `${popupContent}<br>`;
+
+        const label = document.createElement("label");
+        label.textContent = "Prikazati u celosti / Show full info";
+        const checkbox = document.createElement('input');
+        checkbox.setAttribute('type', 'checkbox');
+        checkbox.checked = site_state.full_info;
+
+        checkbox.addEventListener('change', (event) => {
+            site_state.full_info = !!event.currentTarget.checked;
+            onEachFeature(feature, layer);
+        })
+        label.appendChild(checkbox);
+        div.appendChild(label);
+
+        site_state.busstop_id = props.id;
+
+
+        history.replaceState(site_state, "", `?id=${props.id}&full=${site_state.full_info}`);
+        layer.bindPopup(div).openPopup();
     }
 
-    function init_edges(map, edges){
-        Object.keys(edges).forEach( (edge) => {
-            const [start, stop] = edge.split('-').map(Number).map( (busstop_id) => busstop_markers[busstop_id].getLatLng());
+    function init_edges(map, edges) {
+        Object.keys(edges).forEach((edge) => {
+            const [start, stop] = edge.split('-').map(Number).map((busstop_id) => busstop_markers[busstop_id].getLatLng());
             var firstpolyline = new L.Polyline([start, stop], {
                 color: 'blue',
                 weight: 5,
@@ -175,10 +196,11 @@
 
 
     function init() {
-        const map = L.map('map').setView([42.45, 18.53], 13);
+        const map = L.map('map', {zoomControl: false}).setView([42.45, 18.53], 13);
 
-        L.control.ruler().addTo(map);
-        L.control.locate({flyTo: true}).addTo(map);
+        L.control.ruler({position: 'bottomright', flyTo: true}).addTo(map);
+        L.control.zoom({position: 'bottomleft'}).addTo(map);
+        L.control.locate({position: 'bottomleft', flyTo: true}).addTo(map);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -202,19 +224,20 @@
             return init_bus_stops(map, busstops);
         }).then(() => {
             const busstop_id = params.get('id');
+            const full_info = params.get('full') == 'true';
             if (busstop_id) {
+                site_state.busstop_id = busstop_id;
+                site_state.full_info = full_info;
                 const marker = busstop_markers[busstop_id];
-                console.log(marker)
                 map.setView(marker.getLatLng(), 15);
-                marker.fire('click');
+                onEachFeature(marker.feature, marker)
             }
         }).then(() => {
-            if(window.location.pathname === "/edges.html"){
+            if (window.location.pathname === "/edges.html") {
                 init_edges(map, edges);
             }
         })
     }
-
 
     document.addEventListener("DOMContentLoaded", init);
 })()
