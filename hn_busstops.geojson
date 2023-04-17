@@ -1,68 +1,1986 @@
 {
-"type": "FeatureCollection",
-"name": "hn_busstops",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "name": "BAJKOVINA - SERVISNA ZONA", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 6 }, "geometry": { "type": "Point", "coordinates": [ 18.4996445, 42.4553165, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "SERVISNA ZONA - BAJKOVINA", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 7 }, "geometry": { "type": "Point", "coordinates": [ 18.4996525, 42.4554412, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "IGALO - DUBROVAČKA", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 8 }, "geometry": { "type": "Point", "coordinates": [ 18.5038948, 42.4543262, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "INSTITUT \"NOVA FAZA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 9 }, "geometry": { "type": "Point", "coordinates": [ 18.5098037, 42.4565526, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "STARA BANJA", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 10 }, "geometry": { "type": "Point", "coordinates": [ 18.5125181, 42.4585433, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "IGALO \"KOD POŠTE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 11 }, "geometry": { "type": "Point", "coordinates": [ 18.5159728, 42.4595258, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "IGALO \"HTL VOJVODINA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 12 }, "geometry": { "type": "Point", "coordinates": [ 18.5202791, 42.4582603, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "TOPLA 1 (ISPOD SEMAFORA)", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 13 }, "geometry": { "type": "Point", "coordinates": [ 18.5262591, 42.4560954, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "CENTAR", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 14 }, "geometry": { "type": "Point", "coordinates": [ 18.532569, 42.4527361, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "STANICA \"KOD TONSATIJA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 15 }, "geometry": { "type": "Point", "coordinates": [ 18.5380045, 42.4501525, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "SAVINA 1", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 16 }, "geometry": { "type": "Point", "coordinates": [ 18.5452706, 42.4510549, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "SAVINA 2 (ISPOD ŠKOLE)", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 17 }, "geometry": { "type": "Point", "coordinates": [ 18.5482438, 42.4508352, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "SAVINA 3 (ISPOD MANASTIRA)", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 18 }, "geometry": { "type": "Point", "coordinates": [ 18.5528398, 42.4509263, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "MELJINE \"KOD BOLNICE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 19 }, "geometry": { "type": "Point", "coordinates": [ 18.5573123, 42.4526777, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "MELJINE \"KRUŽNI TOK\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 20 }, "geometry": { "type": "Point", "coordinates": [ 18.5586011, 42.4542946, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "MELJINE \"KOD VOLI-A\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 21 }, "geometry": { "type": "Point", "coordinates": [ 18.5608783, 42.4551535, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "MELJINE \"PREKO PUTA VOLI-A\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 22 }, "geometry": { "type": "Point", "coordinates": [ 18.5612686, 42.4552514, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "ZELENIKA \"KOD LUKE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 23 }, "geometry": { "type": "Point", "coordinates": [ 18.5729362, 42.4507887, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "ZELENIKA \"PREKO PUTA LUKE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 24 }, "geometry": { "type": "Point", "coordinates": [ 18.5730059, 42.4509085, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "ZELENIKA \"KOD OKOV-A\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 25 }, "geometry": { "type": "Point", "coordinates": [ 18.57577, 42.4475904, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KUMBOR STANICA \"KOD XANADU-A\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 26 }, "geometry": { "type": "Point", "coordinates": [ 18.5840982, 42.4426631, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KUMBOR \"KOD OLIMPIJE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 27 }, "geometry": { "type": "Point", "coordinates": [ 18.5902002, 42.4394317, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "ĐENOVIĆI \"KOD TORTE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 28 }, "geometry": { "type": "Point", "coordinates": [ 18.6009948, 42.4380758, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "ĐENOVIĆI \"PRŠUT KRIVINA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 29 }, "geometry": { "type": "Point", "coordinates": [ 18.60948, 42.4375344, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BAOŠIĆI \"KOD DELI RADIVOJA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 30 }, "geometry": { "type": "Point", "coordinates": [ 18.6191198, 42.4401156, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BAOŠIĆI \"CENTAR\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 31 }, "geometry": { "type": "Point", "coordinates": [ 18.6246076, 42.4416813, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BAOŠIĆI \"PRAVAC\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 32 }, "geometry": { "type": "Point", "coordinates": [ 18.6330284, 42.4435597, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"KOD DJEČIJEG DOMA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 33 }, "geometry": { "type": "Point", "coordinates": [ 18.639518, 42.4451728, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"ŽAGER\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 34 }, "geometry": { "type": "Point", "coordinates": [ 18.6430532, 42.4476993, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"KOD PANORAME\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 35 }, "geometry": { "type": "Point", "coordinates": [ 18.6512433, 42.4525511, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"KOD VOLI-A\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 36 }, "geometry": { "type": "Point", "coordinates": [ 18.6549313, 42.4546468, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KAMENARI \"CASA DEL MARE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 37 }, "geometry": { "type": "Point", "coordinates": [ 18.6732562, 42.4632508, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KAMENARI \"OKRETIŠTE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 38 }, "geometry": { "type": "Point", "coordinates": [ 18.6755307, 42.4674237, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"PREKO PUTA PARK-A\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 39 }, "geometry": { "type": "Point", "coordinates": [ 18.6653557, 42.4575321, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"PREKO PUTA PANORAME\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 40 }, "geometry": { "type": "Point", "coordinates": [ 18.6512031, 42.4526382, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"ŽAGER\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 41 }, "geometry": { "type": "Point", "coordinates": [ 18.642856, 42.4477765, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"PREKO PUTA DJEČIJEG DOMA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 42 }, "geometry": { "type": "Point", "coordinates": [ 18.6388783, 42.4448759, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BAOŠIĆI \"PRAVAC\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 43 }, "geometry": { "type": "Point", "coordinates": [ 18.6339605, 42.4437012, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BAOŠIĆI \"CENTAR\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 44 }, "geometry": { "type": "Point", "coordinates": [ 18.6242241, 42.4416912, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "ĐENOVIĆI \"IZNAD PAPAGAJA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 45 }, "geometry": { "type": "Point", "coordinates": [ 18.6175413, 42.4403511, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "ĐENOVIĆI", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 46 }, "geometry": { "type": "Point", "coordinates": [ 18.6096717, 42.4381549, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "ĐENOVIĆI \"PREKO PUTA TORTE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 47 }, "geometry": { "type": "Point", "coordinates": [ 18.60166, 42.4381906, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KUMBOR STANICA \"KOD BLAGOJEVIĆA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 48 }, "geometry": { "type": "Point", "coordinates": [ 18.5922803, 42.4388636, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KUMBOR STANICA  \"KOD XANADU-A\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 49 }, "geometry": { "type": "Point", "coordinates": [ 18.5844938, 42.4419812, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "DUBRAVA", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>3. H.NOVI - KRUŠEVICE - H.NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 50 }, "geometry": { "type": "Point", "coordinates": [ 18.5390076, 42.4533031, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "TOPLA 2 \"KOD DOMA ZDRAVLJA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 51 }, "geometry": { "type": "Point", "coordinates": [ 18.5271804, 42.4572323, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "IGALO \"KOD PEKARE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 52 }, "geometry": { "type": "Point", "coordinates": [ 18.5209644, 42.4603064, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "PETLJA", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 53 }, "geometry": { "type": "Point", "coordinates": [ 18.5115794, 42.4618549, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "STANICA \"KOD INSTITUTA\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 54 }, "geometry": { "type": "Point", "coordinates": [ 18.5058327, 42.4574094, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KAMENARI \"KOD IDEA-E\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 55 }, "geometry": { "type": "Point", "coordinates": [ 18.6733072, 42.4657439, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"KOD PRAONE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 56 }, "geometry": { "type": "Point", "coordinates": [ 18.6594871, 42.4564635, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"KOD IDEA-E\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 57 }, "geometry": { "type": "Point", "coordinates": [ 18.6590847, 42.456226, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"HTL PARK\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 58 }, "geometry": { "type": "Point", "coordinates": [ 18.6646798, 42.4574411, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KAMENARI \"TOURIST INFO\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 59 }, "geometry": { "type": "Point", "coordinates": [ 18.6729571, 42.4629639, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KOD CASTELLANA-E", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 60 }, "geometry": { "type": "Point", "coordinates": [ 18.5471535, 42.4547755, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "ZELENIKA \"KOD ŠKOLE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. IGALO - KAMENARI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 62 }, "geometry": { "type": "Point", "coordinates": [ 18.5753918, 42.4478171, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "BIJELA \"PREKO PUTA ZOTTO-A\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 63 }, "geometry": { "type": "Point", "coordinates": [ 18.6540368, 42.4542985, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "DOLAZNI PERON, ASHN", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br><br>3. H.NOVI - KRUŠEVICE - H.NOVI      <br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 64 }, "geometry": { "type": "Point", "coordinates": [ 18.5337115, 42.4532403, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KOD \"GLAVNE STANICE\"", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>3. H.NOVI - KRUŠEVICE - H.NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 65 }, "geometry": { "type": "Point", "coordinates": [ 18.5352686, 42.4531854, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "KOD BENZINSKE PUMPE", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI<br>6. H.NOVI - NJIVICE - H.NOVI<br>7. H.NOVI - SUTORINA - H.NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 66 }, "geometry": { "type": "Point", "coordinates": [ 18.5024652, 42.4554107, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "POČETNA KOD VOLI-A", "styleUrl": "#icon-1532-0288D1", "stroke-opacity": null, "stroke": null, "stroke-width": null, "description": { "@type": "html", "value": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI" }, "icon-opacity": 1, "icon-color": "#0288d1", "icon-scale": 1, "icon": "https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png", "id": 67 }, "geometry": { "type": "Point", "coordinates": [ 18.4935428, 42.4570898, 0.0 ] } }
-]
+  "type": "FeatureCollection",
+  "name": "hn_busstops",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.499644,
+          42.455317,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BAJKOVINA - SERVISNA ZONA",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI",
+        "id": 0,
+        "lines": [
+          "1. KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+          "4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI",
+          "6. HERCEG NOVI - NJIVICE - HERCEG NOVI",
+          "7. HERCEG NOVI - SUTORINA - HERCEG NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.499652,
+          42.455441,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SERVISNA ZONA - BAJKOVINA",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI",
+        "id": 1,
+        "lines": [
+          "1. KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+          "4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI",
+          "6. HERCEG NOVI - NJIVICE - HERCEG NOVI",
+          "7. HERCEG NOVI - SUTORINA - HERCEG NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.503895,
+          42.454326,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "IGALO - DUBROVAČKA",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 2,
+        "lines": [
+          "1. IGALO - KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.509804,
+          42.456553,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "INSTITUT \"NOVA FAZA\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 3,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.512518,
+          42.458543,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "STARA BANJA",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 4,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.515973,
+          42.459526,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "IGALO \"KOD POŠTE\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 5,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.520279,
+          42.45826,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "IGALO \"HTL VOJVODINA\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 6,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.526259,
+          42.456095,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "TOPLA 1 (ISPOD SEMAFORA)",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 7,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.532569,
+          42.452736,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "CENTAR",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 8,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.538004,
+          42.450153,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "STANICA \"KOD TONSATIJA\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 9,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.545271,
+          42.451055,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SAVINA 1",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 10,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.548244,
+          42.450835,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SAVINA 2 (ISPOD ŠKOLE)",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 11,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.55284,
+          42.450926,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SAVINA 3 (ISPOD MANASTIRA)",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 12,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.557312,
+          42.452678,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MELJINE \"KOD BOLNICE\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 13,
+        "lines": [
+          "1. IGALO - KAMENARI",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.558601,
+          42.454295,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MELJINE \"KRUŽNI TOK\"",
+        "description": "LINIJE: <br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 14,
+        "lines": [
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.560878,
+          42.455154,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MELJINE \"KOD VOLI-A\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 15,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.561269,
+          42.455251,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MELJINE \"PREKO PUTA VOLI-A\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 16,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.572936,
+          42.450789,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "ZELENIKA \"KOD LUKE\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 17,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.573006,
+          42.450908,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "ZELENIKA \"PREKO PUTA LUKE\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 18,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.57577,
+          42.44759,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "ZELENIKA \"KOD OKOV-A\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 19,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.584098,
+          42.442663,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KUMBOR STANICA \"KOD XANADU-A\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 20,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.5902,
+          42.439432,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KUMBOR \"KOD OLIMPIJE\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 21,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.600995,
+          42.438076,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "ĐENOVIĆI \"KOD TORTE\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 22,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.60948,
+          42.437534,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "ĐENOVIĆI \"PRŠUT KRIVINA\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 23,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.61912,
+          42.440116,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BAOŠIĆI \"KOD DELI RADIVOJA\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 24,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.624608,
+          42.441681,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BAOŠIĆI \"CENTAR\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 25,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.633028,
+          42.44356,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BAOŠIĆI \"PRAVAC\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 26,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.639518,
+          42.445173,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"KOD DJEČIJEG DOMA\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 27,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.643053,
+          42.447699,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"ŽAGER\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 28,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.651243,
+          42.452551,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"KOD PANORAME\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 29,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.654931,
+          42.454647,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"KOD VOLI-A\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 30,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.673256,
+          42.463251,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KAMENARI \"CASA DEL MARE\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 31,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.675531,
+          42.467424,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KAMENARI \"OKRETIŠTE\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI - IGALO",
+        "id": 32,
+        "lines": [
+          "1. IGALO - KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.665356,
+          42.457532,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"PREKO PUTA PARK-A\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 33,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.651203,
+          42.452638,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"PREKO PUTA PANORAME\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 34,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.642856,
+          42.447777,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"ŽAGER\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 35,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.638878,
+          42.444876,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"PREKO PUTA DJEČIJEG DOMA\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 36,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.633961,
+          42.443701,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BAOŠIĆI \"PRAVAC\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 37,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.624224,
+          42.441691,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BAOŠIĆI \"CENTAR\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 38,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.617541,
+          42.440351,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "ĐENOVIĆI \"IZNAD PAPAGAJA\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 39,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.609672,
+          42.438155,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "ĐENOVIĆI",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 40,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.60166,
+          42.438191,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "ĐENOVIĆI \"PREKO PUTA TORTE\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 41,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.59228,
+          42.438864,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KUMBOR STANICA \"KOD BLAGOJEVIĆA\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 42,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.584494,
+          42.441981,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KUMBOR STANICA  \"KOD XANADU-A\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 43,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.539008,
+          42.453303,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "DUBRAVA",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 44,
+        "lines": [
+          "1. KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.52718,
+          42.457232,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "TOPLA 2 \"KOD DOMA ZDRAVLJA\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI",
+        "id": 45,
+        "lines": [
+          "1. KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+          "4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI",
+          "5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI",
+          "6. HERCEG NOVI - NJIVICE - HERCEG NOVI",
+          "7. HERCEG NOVI - SUTORINA - HERCEG NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.520964,
+          42.460306,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "IGALO \"KOD PEKARE\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI",
+        "id": 46,
+        "lines": [
+          "1. KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+          "4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI",
+          "5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI",
+          "6. HERCEG NOVI - NJIVICE - HERCEG NOVI",
+          "7. HERCEG NOVI - SUTORINA - HERCEG NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.511579,
+          42.461855,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "PETLJA",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI",
+        "id": 47,
+        "lines": [
+          "1. KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+          "4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI",
+          "6. HERCEG NOVI - NJIVICE - HERCEG NOVI",
+          "7. HERCEG NOVI - SUTORINA - HERCEG NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.505833,
+          42.457409,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "STANICA \"KOD INSTITUTA\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI",
+        "id": 48,
+        "lines": [
+          "1. KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+          "4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI",
+          "6. HERCEG NOVI - NJIVICE - HERCEG NOVI",
+          "7. HERCEG NOVI - SUTORINA - HERCEG NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.673307,
+          42.465744,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KAMENARI \"KOD IDEA-E\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 49,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.659487,
+          42.456463,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"KOD PRAONE\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 50,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.659085,
+          42.456226,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"KOD IDEA-E\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 51,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.66468,
+          42.457441,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"HTL PARK\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 52,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.672957,
+          42.462964,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KAMENARI \"TOURIST INFO\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 53,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.547154,
+          42.454775,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KOD CASTELLANA-E",
+        "description": "LINIJE: <br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+        "id": 54,
+        "lines": [
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.494459,
+          42.534125,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KRUŠEVICE 2",
+        "description": "LINIJE: <br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 55,
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.544509,
+          42.462337,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "PODI \"KOD ŠKOLE\"",
+        "description": "LINIJE: <br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 56,
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.538482,
+          42.467774,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "TREBESINJ",
+        "description": "LINIJE: <br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 57,
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.486841,
+          42.512801,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "PETIJEVIĆI",
+        "description": "LINIJE: <br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 58,
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.538715,
+          42.458682,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "PODI \"TURION\"",
+        "description": "LINIJE: <br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 59,
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.558287,
+          42.455723,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MELJINE \"IZNAD KRUŽNOG TOKA\"",
+        "description": "LINIJE: <br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 60,
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.476206,
+          42.491366,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MOJDEŽ 3",
+        "description": "LINIJE: <br>5. H.NOVI - MOJDEŽ - H.NOVI",
+        "id": 61,
+        "lines": [
+          "5. H.NOVI - MOJDEŽ - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.45311,
+          42.493124,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "PRIJEVOR 3",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI",
+        "id": 62,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.456586,
+          42.481181,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "DEBELI BRIJEG",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI<br>7. H.NOVI - SUTORINA - H.NOVI",
+        "id": 63,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI",
+          "7. H.NOVI - SUTORINA - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.516099,
+          42.435224,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "NJIVICE \"HTL RIVJERA\"",
+        "description": "LINIJE: <br>6. H.NOVI - NJIVICE - H.NOVI",
+        "id": 64,
+        "lines": [
+          "6. H.NOVI - NJIVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.575392,
+          42.447817,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "ZELENIKA \"KOD ŠKOLE\"",
+        "description": "LINIJE: <br>1. IGALO - KAMENARI",
+        "id": 65,
+        "lines": [
+          "1. IGALO - KAMENARI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.654037,
+          42.454299,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "BIJELA \"PREKO PUTA ZOTTO-A\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO",
+        "id": 66,
+        "lines": [
+          "1. KAMENARI - IGALO"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.533711,
+          42.45324,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "DOLAZNI PERON, ASHN",
+        "description": "LINIJE: <br><br>3. H.NOVI - KRUŠEVICE - H.NOVI      <br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI",
+        "id": 67,
+        "lines": [
+          "",
+          "3. H.NOVI - KRUŠEVICE - H.NOVI      ",
+          "4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI",
+          "5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI",
+          "6. HERCEG NOVI - NJIVICE - HERCEG NOVI",
+          "7. HERCEG NOVI - SUTORINA - HERCEG NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.535269,
+          42.453185,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KOD \"GLAVNE STANICE\"",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 68,
+        "lines": [
+          "1. KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.502465,
+          42.455411,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KOD BENZINSKE PUMPE",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI<br>6. H.NOVI - NJIVICE - H.NOVI<br>7. H.NOVI - SUTORINA - H.NOVI",
+        "id": 69,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI",
+          "6. H.NOVI - NJIVICE - H.NOVI",
+          "7. H.NOVI - SUTORINA - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.509898,
+          42.46353,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "GOMILA",
+        "description": "LINIJE: <br>5. H.NOVI - MOJDEŽ - H.NOVI",
+        "id": 70,
+        "lines": [
+          "5. H.NOVI - MOJDEŽ - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.506239,
+          42.463387,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "GOMILA - DRENOVIK",
+        "description": "LINIJE: <br>5. H.NOVI - MOJDEŽ - H.NOVI",
+        "id": 71,
+        "lines": [
+          "5. H.NOVI - MOJDEŽ - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.506204,
+          42.467918,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SUŠĆEPAN",
+        "description": "LINIJE: <br>5. H.NOVI - MOJDEŽ - H.NOVI",
+        "id": 72,
+        "lines": [
+          "5. H.NOVI - MOJDEŽ - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.500738,
+          42.476683,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "RATIŠEVINA \"KOD SPOMENIKA\"",
+        "description": "LINIJE: <br>5. H.NOVI - MOJDEŽ - H.NOVI",
+        "id": 73,
+        "lines": [
+          "5. H.NOVI - MOJDEŽ - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.49485,
+          42.47874,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "RATIŠEVINA \"KOD CRKVE\"",
+        "description": "LINIJE: <br>5. H.NOVI - MOJDEŽ - H.NOVI",
+        "id": 74,
+        "lines": [
+          "5. H.NOVI - MOJDEŽ - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.494191,
+          42.482158,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "RATIŠEVINA - MOJDEŽ",
+        "description": "LINIJE: <br>5. H.NOVI - MOJDEŽ - H.NOVI",
+        "id": 75,
+        "lines": [
+          "5. H.NOVI - MOJDEŽ - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.489572,
+          42.491712,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MOJDEŽ 1",
+        "description": "LINIJE: <br>5. H.NOVI - MOJDEŽ - H.NOVI",
+        "id": 76,
+        "lines": [
+          "5. H.NOVI - MOJDEŽ - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.48042,
+          42.492254,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MOJDEŽ 2",
+        "description": "LINIJE:<br>5. H.NOVI - MOJDEŽ - H.NOVI",
+        "id": 77,
+        "lines": [
+          "5. H.NOVI - MOJDEŽ - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.529328,
+          42.47948,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KAMENO ",
+        "description": "LINIJE:<br>3. KRUŠEVICE - H.NOVI",
+        "id": 78,
+        "lines": [
+          "3. KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.529167,
+          42.480714,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KAMENO \"KOD PUTA ZA BORIĆE\"",
+        "description": "LINIJE:<br>3. H.NOVI - KRUŠEVICE ",
+        "id": 79,
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE "
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.502119,
+          42.497079,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MOKRINE 1",
+        "description": "LINIJE:<br>3. KRUŠEVICE - H.NOVI",
+        "id": 80,
+        "lines": [
+          "3. KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.501652,
+          42.497768,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MOKRINE 1",
+        "description": "LINIJE:<br>3. KRUŠEVICE - H.NOVI",
+        "id": 81,
+        "lines": [
+          "3. KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.497388,
+          42.501794,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MOKRINE 2",
+        "description": "LINIJE:<br>3. KRUŠEVICE - H.NOVI",
+        "id": 82,
+        "lines": [
+          "3. KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.495703,
+          42.502341,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MOKRINE 2",
+        "description": "LINIJE: <br>3.  KRUŠEVICE - H.NOVI",
+        "id": 83,
+        "lines": [
+          "3.  KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.490768,
+          42.507912,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "MOKRINE 3",
+        "description": "LINIJE:<br>3. KRUŠEVICE - H.NOVI",
+        "id": 84,
+        "lines": [
+          "3. KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.493611,
+          42.532908,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "KRUŠEVICE 1",
+        "description": "LINIJE:<br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 85,
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.493543,
+          42.45709,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "POČETNA KOD VOLI-A",
+        "description": "LINIJE: <br>1. KAMENARI - IGALO<br>2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)<br>4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI<br>6. HERCEG NOVI - NJIVICE - HERCEG NOVI<br>7. HERCEG NOVI - SUTORINA - HERCEG NOVI",
+        "id": 86,
+        "lines": [
+          "1. KAMENARI - IGALO",
+          "2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)",
+          "4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI",
+          "6. HERCEG NOVI - NJIVICE - HERCEG NOVI",
+          "7. HERCEG NOVI - SUTORINA - HERCEG NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.485549,
+          42.463039,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SUTORINA 1",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI<br>7. H.NOVI - SUTORINA - H.NOVI",
+        "id": 87,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI",
+          "7. H.NOVI - SUTORINA - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.48182,
+          42.468745,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SUTORINA 2 \"KOD TAXI-A\"",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI<br>7. H.NOVI - SUTORINA - H.NOVI",
+        "id": 88,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI",
+          "7. H.NOVI - SUTORINA - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.476745,
+          42.472718,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SUTORINA 3",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI<br>7. H.NOVI - SUTORINA - H.NOVI",
+        "id": 89,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI",
+          "7. H.NOVI - SUTORINA - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.464802,
+          42.476461,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SUTORINA 4 (KOD TRAKTIRA)",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI<br>7. H.NOVI - SUTORINA - H.NOVI",
+        "id": 90,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI",
+          "7. H.NOVI - SUTORINA - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.459451,
+          42.479195,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "SUTORINA \"KOD LUK OIL-A!",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI<br>7. H.NOVI - SUTORINA - H.NOVI",
+        "id": 91,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI",
+          "7. H.NOVI - SUTORINA - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.495982,
+          42.453398,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "NJIVIČKI PUT 1",
+        "description": "LINIJE:<br>6. H.NOVI - NJIVICE - H.NOVI",
+        "id": 92,
+        "lines": [
+          "6. H.NOVI - NJIVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.500899,
+          42.450178,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "NJIVIČKI PUT 2",
+        "description": "LINIJE:<br>6. H.NOVI - NJIVICE - H. NOVI",
+        "id": 93,
+        "lines": [
+          "6. H.NOVI - NJIVICE - H. NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.508905,
+          42.440514,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "NJIVIČKI PUT 3",
+        "description": "LINIJE:<br>6. H.NOVI - NJIVICE - H.NOVI",
+        "id": 94,
+        "lines": [
+          "6. H.NOVI - NJIVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.511845,
+          42.43739,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "NJIVICE 1",
+        "description": "6. H.NOVI - NJIVICE - H. NOVI",
+        "id": 95,
+        "lines": "6. H.NOVI - NJIVICE - H. NOVI"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.513392,
+          42.489431,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "CRVENO BRDO",
+        "description": "LINIJE:<br>3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 96,
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.543098,
+          42.460878,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "PODI \"KOD IDEA-E\"",
+        "description": "3. H.NOVI - KRUŠEVICE - H.NOVI",
+        "id": 97,
+        "lines": "3. H.NOVI - KRUŠEVICE - H.NOVI"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.451125,
+          42.489058,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "PRIJEVOR 1",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI",
+        "id": 98,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.452289,
+          42.48956,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "PRIJEVOR 2",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI",
+        "id": 99,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.449559,
+          42.483381,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "STANICA KOD BABIĆA",
+        "description": "LINIJE:<br>4. H.NOVI - PRIJEVOR - H.NOVI",
+        "id": 100,
+        "lines": [
+          "4. H.NOVI - PRIJEVOR - H.NOVI"
+        ]
+      }
+    }
+  ]
 }

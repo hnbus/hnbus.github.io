@@ -10,6 +10,10 @@
     let busstop_markers = {};
     let edge_speeds = {};
     let busstops, routes_data;
+    let geoJsonLayer = null;
+    let filterRouteOptions = new Set();
+    let map;
+    let cached_data = {};
     const site_state = {'busstop_id': 0, 'full_info': false};
     const is_localhost = (location.hostname === "localhost" || location.hostname === "127.0.0.1");
 
@@ -182,10 +186,11 @@
     }
 
     function init_bus_stops(map, busstops) {
-        return L.geoJSON(busstops, {
+        geoJsonLayer = L.geoJSON(busstops, {
             style(feature) {
                 return feature.properties && feature.properties.style;
             },
+            filter: filterBySelectedRoute,
             onEachFeature: onEachFeatureAddTooltip,
             pointToLayer(feature, latlng) {
                 const id = feature.properties.id;
@@ -204,27 +209,43 @@
 
             }
         }).on('click', ({sourceTarget, layer}) => onEachFeature(sourceTarget.feature, layer)).addTo(map);
+
+        return geoJsonLayer;
     }
 
 
-    function init() {
-        const map = L.map('map', {zoomControl: false}).setView([42.45, 18.53], 13);
+    function filterBySelectedRoute(feature) {
+        if (filterRouteOptions.size === 0){
+            return true;
+        }
 
-        L.control.ruler({position: 'bottomright', flyTo: true}).addTo(map);
-        L.control.zoom({position: 'bottomleft'}).addTo(map);
-        L.control.locate({position: 'bottomleft', flyTo: true}).addTo(map);
+        const featureOptions = new Set(Array.from(feature.properties.lines).map(x => x.split('.')[0]));
+        const intersection = new Set([...filterRouteOptions].filter((x) => featureOptions.has(x)));
+        return intersection.size > 0;
+    }
 
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+    function onRouteChanged(event){
+        filterRouteOptions = new Set(Array.from(event.target.selectedOptions).map(x => x.text.split('.')[0]));
 
-        const params = new URLSearchParams(window.location.search);
+        init(false);
+    }
 
+    function getCachedOrFetch(url){
+        if (url in cached_data){
+            return cached_data[url];
+        }
+        return fetch(url).then(resp => resp.json()).then(function(data){
+            cached_data[url] = data;
+            return data;
+        }
+        )
+    }
+
+    function reloadGeoJson(map, on_start=false){
         Promise.all([
                 '/hn_busstops.geojson',
                 '/hn_routes.json',
-            ].map(url => fetch(url).then(resp => resp.json()))
+            ].map(url => getCachedOrFetch(url))
         ).then(function (data_files) {
             [busstops, routes_data] = data_files;
             ({routes, edges, schedules, edge_speeds, holiday_list, sunday_schedules} = routes_data);
@@ -235,6 +256,12 @@
             }
             return init_bus_stops(map, busstops);
         }).then(() => {
+            if (!on_start){
+                return;
+            }
+
+            const params = new URLSearchParams(window.location.search);
+
             const busstop_id = params.get('id');
             const full_info = params.get('full') == 'true';
             if (busstop_id) {
@@ -249,6 +276,28 @@
                 init_edges(map, edges);
             }
         })
+    }
+
+    function init(on_start=true) {
+        if (!on_start){
+            map.off();
+            map.remove();
+        }
+        map = L.map('map', {zoomControl: false}).setView([42.45, 18.53], 13);
+
+        L.control.ruler({position: 'bottomright', flyTo: true}).addTo(map);
+        L.control.zoom({position: 'bottomleft'}).addTo(map);
+        L.control.locate({position: 'bottomleft', flyTo: true}).addTo(map);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var routeSelect = document.querySelector('#routeSelect');
+        routeSelect.addEventListener("change", onRouteChanged);
+
+        reloadGeoJson(map, on_start)
     }
 
     document.addEventListener("DOMContentLoaded", init);

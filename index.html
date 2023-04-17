@@ -48,6 +48,8 @@
             width: 100%;
             z-index: -10;
         }
+
+
     </style>
 </head>
 <body>
@@ -55,6 +57,23 @@
 <div id='map'></div>
 <div id="info"></div>
 
+<div style="position: absolute; top: 0; right: 5px;">
+<select id="routeSelect" multiple
+        multiselect-search="true"
+        multiselect-select-all="true"
+        multiselect-max-items="7"
+        multiselect-hide-x = "false"
+>
+    <option value="1">1. IGALO - KAMENARI - IGALO</option>
+    <option value="2">2. IGALO - MELJINE - IGALO (KRUŽNA LINIJA)</option>
+    <option value="4">4. HERCEG NOV I - PRIJEVOR - HERCEG NOVI</option>
+    <option value="5">5. HERCEG NOVI - MOJDEŽ - HERCEG NOVI</option>
+    <option value="6">6. HERCEG NOVI - NJIVICE - HERCEG NOVI</option>
+    <option value="7">7. HERCEG NOVI - SUTORINA - HERCEG NOV</option>
+</select>
+</div>
+
+<script src="multiselect-dropdown.js" ></script>
 <script src="main.js"></script>
 
 
