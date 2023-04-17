@@ -121,6 +121,8 @@
             popupContent += feature.properties.popupContent;
         }
 
+
+
         let is_special_date = moment().day() === 0; // is Sunday
         if (!is_special_date) {
             const curr_date = moment().startOf('day');
@@ -147,6 +149,10 @@
 
             return `${popup_header}<br/><div class="${site_state.full_info ? 'multi' : ''}">${arrive_time}</div>`
         }).filter((x) => x !== null).join("<br/><br/>")
+
+        if (is_localhost && feature.properties && feature.properties.lines) {
+            popupContent += "<br/>" + feature.properties.lines.join("<br/>");
+        }
 
 
         const div = document.createElement("div");
@@ -227,7 +233,7 @@
     function onRouteChanged(event){
         filterRouteOptions = new Set(Array.from(event.target.selectedOptions).map(x => x.text.split('.')[0]));
 
-        init(false);
+        reloadGeoJson(map, false);
     }
 
     function getCachedOrFetch(url){
@@ -242,6 +248,19 @@
     }
 
     function reloadGeoJson(map, on_start=false){
+        map.eachLayer(function (layer) {
+            if (layer._url){
+                return
+            }
+            if (layer.options) {
+                map.removeLayer(layer);
+            }
+        });
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
         Promise.all([
                 '/hn_busstops.geojson',
                 '/hn_routes.json',
@@ -279,20 +298,13 @@
     }
 
     function init(on_start=true) {
-        if (!on_start){
-            map.off();
-            map.remove();
-        }
         map = L.map('map', {zoomControl: false}).setView([42.45, 18.53], 13);
 
         L.control.ruler({position: 'bottomright', flyTo: true}).addTo(map);
         L.control.zoom({position: 'bottomleft'}).addTo(map);
         L.control.locate({position: 'bottomleft', flyTo: true}).addTo(map);
 
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+
 
         var routeSelect = document.querySelector('#routeSelect');
         routeSelect.addEventListener("change", onRouteChanged);
