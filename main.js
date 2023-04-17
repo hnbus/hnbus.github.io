@@ -25,11 +25,13 @@
     }
 
     function update_arrival_info(map_features, routes, edges) {
-        map_features.features.forEach(({properties}) => {
+        map_features.features.forEach(({properties, geometry}) => {
+            const point = geometry.coordinates;
             arrival_info[properties.id] = {
                 'id': properties.id,
                 'name': properties.name,
                 'description': properties.description.value,
+                'coords': L.latLng(point[0], point[1]),
                 'route_length': {},
                 'route_time': {}
             }
@@ -48,13 +50,16 @@
                 }
                 const prev_busstop_id = array[index - 1];
                 const edge_id = `${prev_busstop_id}-${busstop_id}`;
-                const edge_distance = edges[edge_id]
+                let edge_distance = edges[edge_id]
+                if (!edge_distance) {
+                    problem_ids.push(busstop_id)
+                    edge_distance = map.distance(arrival_info[prev_busstop_id].coords, arrival_info[busstop_id].coords) / 1000;
+                    edges[edge_id] = edge_distance
+                    console.error("CALC DISTANCE", busline_name, edge_distance)
+                }
                 const curr_distance = intermediate_distances[prev_busstop_id] + edge_distance;
                 const curr_time = intermediate_times[prev_busstop_id] + get_time_for_edge(edge_id, edge_distance);
-                if (!edge_distance) {
-                    console.error("EMPTY DISTANCE", busline_name, busstop_id, prev_busstop_id, arrival_info[busstop_id])
-                    problem_ids.push(busstop_id)
-                }
+
 
                 intermediate_distances[busstop_id] = curr_distance;
                 intermediate_times[busstop_id] = curr_time;
@@ -204,7 +209,7 @@
 
                 const marker = L.circleMarker(latlng, {
                     radius: 10,
-                    fillColor: is_issued ? '#ff7800' : '#ff00ff',
+                    fillColor: is_issued && is_localhost ? '#ff7800' : '#ff00ff',
                     color: '#000',
                     weight: 1,
                     opacity: 1,
