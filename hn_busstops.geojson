@@ -1886,7 +1886,9 @@
         "name": "NJIVICE 1",
         "description": "6. H.NOVI - NJIVICE - H. NOVI",
         "id": 95,
-        "lines": "6. H.NOVI - NJIVICE - H. NOVI"
+        "lines": [
+          "6. H.NOVI - NJIVICE - H. NOVI"
+        ]
       }
     },
     {
@@ -1922,7 +1924,9 @@
         "name": "PODI \"KOD IDEA-E\"",
         "description": "3. H.NOVI - KRUŠEVICE - H.NOVI",
         "id": 97,
-        "lines": "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        "lines": [
+          "3. H.NOVI - KRUŠEVICE - H.NOVI"
+        ]
       }
     },
     {
