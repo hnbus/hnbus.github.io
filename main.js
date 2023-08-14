@@ -55,7 +55,7 @@
                     problem_ids.push(busstop_id)
                     edge_distance = map.distance(arrival_info[prev_busstop_id].coords, arrival_info[busstop_id].coords) / 1000;
                     edges[edge_id] = edge_distance
-                    console.error("CALC DISTANCE", busline_name, edge_distance)
+                    // console.error("CALC DISTANCE", busline_name, edge_distance)
                 }
                 const curr_distance = intermediate_distances[prev_busstop_id] + edge_distance;
                 const curr_time = intermediate_times[prev_busstop_id] + get_time_for_edge(edge_id, edge_distance);
@@ -257,7 +257,7 @@
             if (layer._url){
                 return
             }
-            if (layer.options) {
+            if (layer.options && Object.keys(layer.options).length > 0) {
                 map.removeLayer(layer);
             }
         });
@@ -307,11 +307,10 @@
 
         L.control.ruler({position: 'bottomright', flyTo: true}).addTo(map);
         L.control.zoom({position: 'bottomleft'}).addTo(map);
-        L.control.locate({position: 'bottomleft', flyTo: true}).addTo(map);
-
-
+        L.control.locate({position: 'bottomleft'}).addTo(map);
 
         var routeSelect = document.querySelector('#routeSelect');
+        filterRouteOptions = new Set(Array.from(routeSelect.selectedOptions).map(x => x.text.split('.')[0]));
         routeSelect.addEventListener("change", onRouteChanged);
 
         reloadGeoJson(map, on_start)
