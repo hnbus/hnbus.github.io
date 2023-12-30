@@ -305,7 +305,7 @@
     function init(on_start=true) {
         map = L.map('map', {zoomControl: false}).setView([42.45, 18.53], 13);
 
-        L.control.ruler({position: 'bottomright', flyTo: true}).addTo(map);
+        // L.control.ruler({position: 'bottomright', flyTo: true}).addTo(map);
         L.control.zoom({position: 'bottomleft'}).addTo(map);
         L.control.locate({position: 'bottomleft'}).addTo(map);
 
